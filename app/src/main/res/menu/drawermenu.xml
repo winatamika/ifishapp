@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/db" android:title="Dashboard" android:icon="@drawable/ic_desktop_mac_black_24dp"/>
+    <item android:id="@+id/trip" android:title="Trip" android:icon="@drawable/ic_directions_boat_black_24dp"/>
+    <item android:id="@+id/protocol" android:title="Protocol" android:icon="@drawable/ic_assignment_black_24dp"/>
+    <item android:id="@+id/sites" android:title="Sites" android:icon="@drawable/ic_landscape_black_24dp"/>
+    <item android:id="@+id/call" android:title="Call Admin" android:icon="@drawable/ic_call_black_24dp"/>
+    <item android:id="@+id/logout" android:title="Logout" android:icon="@drawable/ic_fingerprint_black_24dp"/>
+</menu>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mick.dockandroidlogin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/ifishlogo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Login" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Register" />
+        <activity android:name=".Dashboard" />
+        <activity
+            android:name=".sampling.GenerateOffline"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:label="Generate Offline Sampling" />
+        <activity
+            android:name=".sampling.GenerateOnline"
+            android:label="Generate Online Sampling" />
+
+        <activity
+            android:name=".sampling.ListGrid"
+            android:label="PETA GRID MDPI" />
+
+        <activity
+            android:name=".sampling.ListUmpan"
+            android:label="List Umpan PDF" />
+
+        <activity
+            android:name=".sampling.ListBycatch"
+            android:label="List ByCatch PDF" />
+        <activity
+            android:name=".sampling.TripLists"
+            android:label="Trip Lists" />
+        <activity
+            android:name=".sampling.TripProcess"
+            android:label="Trip Process" />
+        <activity
+            android:name=".sampling.TripArchieve"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:label="Trip Archieve" />
+        <activity
+            android:name=".sampling.SheetSelection"
+            android:label="Select Sheet" />
+        <activity
+            android:name=".sampling.TripInfo"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:label="Trip Information" />
+        <activity android:name=".sampling.BaitInfo"
+            android:label="Bait Information"/>
+        <activity android:name=".sampling.BycatchInfo"
+            android:label="Bycatch Information"/>
+        <activity android:name=".sampling.SamplingInfo"
+            android:label="Sampling Information"/>
+        <activity android:name=".sampling.SmallFishAdd"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:label="Small Fish Information"/>
+        <activity android:name=".sampling.EtpInfo"
+            android:label="Etp Information"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAp5UsOq_WP6uabyAyExSOJw6w_7hRKGx0" />
+    </application>
+
+</manifest>

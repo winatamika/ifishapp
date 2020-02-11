@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kategori Umpan" />
+
+            <Spinner
+                android:id="@+id/kategori"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Spesies Umpan" />
+
+            <Spinner
+                android:id="@+id/species"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Spesies Umpan *(Jika Tidak Ada)" />
+
+            <EditText
+                android:id="@+id/speciesCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Grid A" />
+
+            <Spinner
+                android:id="@+id/grid_a"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Grid B" />
+
+            <Spinner
+                android:id="@+id/grid_b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/txtViewTotalBait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Total Umpan (Kg)" />
+            <EditText
+                android:id="@+id/totalBait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/txtViewEstBait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Estimasi Umpan (Kg)" />
+            <EditText
+                android:id="@+id/estimasiBait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Alat Tangkap Umpan" />
+
+            <Spinner
+                android:id="@+id/gear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+
+            <TextView
+                android:id="@+id/txtViewPlPengadaanUmpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="PL Pengadaan Umpan" />
+            <EditText
+                android:id="@+id/Pl_pengadaanUmpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:id="@+id/txtViewPlEmber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Berapa Ember " />
+            <EditText
+                android:id="@+id/Pl_ember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                />
+
+
+            <TextView
+                android:id="@+id/txtViewHlDomesticImpor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="HL Domestik/ Import" />
+
+            <Spinner
+                android:id="@+id/hlDomesticImpor"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Nomor Kontainer Dipakai : "
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/list1"
+                    android:text=""
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge">
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Jumlah Sampling Ikan"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/list2"
+                    android:text=""
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge">
+                </TextView>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="Nomor Kontainer" />
+            <EditText
+                android:id="@+id/editKontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="Berat Kontainer" />
+            <EditText
+                android:id="@+id/editKeranjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop ="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="Species" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupSpecies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true" >
+
+                <RadioButton
+                    android:id="@+id/radioALB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/radio_alb" />
+
+                <RadioButton
+                    android:id="@+id/radioBET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/radio_bet" />
+
+                <RadioButton
+                    android:id="@+id/radioSKJ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:checked="true"
+                    android:text="@string/radio_skj" />
+
+                <RadioButton
+                    android:id="@+id/radioYFT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/radio_yft" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:text="Panjang Ikan" />
+
+            <EditText
+                android:id="@+id/editPanjang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:enabled="false"
+                android:textColor="@color/darkgray"
+                android:textStyle="bold"
+                android:maxLength="20"/>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <Button
+                        android:id="@+id/buttonSeven"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_cal_bg"
+                        android:text="7"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonEight"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_toRightOf="@id/buttonSeven"
+                        android:text="8"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonNine"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_toRightOf="@id/buttonEight"
+                        android:text="9"
+                        android:textSize="20sp" />
+
+                <Button
+                        android:id="@+id/buttonFour"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                    android:background="@drawable/button_cal_bg"
+                        android:layout_below="@id/buttonSeven"
+                        android:text="4"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonFive"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/buttonEight"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_below="@id/buttonEight"
+                        android:text="5"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonSix"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/buttonNine"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_below="@id/buttonNine"
+                        android:text="6"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonOne"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_below="@id/buttonFour"
+                        android:text="1"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonTwo"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_alignRight="@id/buttonEight"
+                        android:layout_below="@id/buttonFive"
+                        android:text="2"
+                        android:textSize="20sp" />
+
+                <Button
+                        android:id="@+id/buttonDot"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                    android:background="@drawable/button_cal_bg"
+                        android:layout_below="@id/buttonOne"
+                        android:text="."
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/buttonZero"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/buttonEight"
+                        android:background="@drawable/button_cal_bg"
+                        android:layout_below="@id/buttonTwo"
+                        android:text="0"
+                        android:textSize="20sp" />
+
+
+                <Button
+                    android:id="@+id/buttonSave"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:background="@drawable/background_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Simpan Data"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/buttonNine"
+                    android:layout_marginTop="11dp"
+                    android:layout_alignBottom="@+id/buttonZero" />
+
+                <Button
+                    android:id="@+id/buttonThree"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_cal_bg"
+                    android:text="3"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/buttonSix"
+                    android:layout_toRightOf="@+id/buttonFive"
+                    android:layout_toEndOf="@+id/buttonFive" />
+
+                <Button
+                    android:id="@+id/buttonClear"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:background="@drawable/button_cal_bg"
+                    android:textSize="20sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/buttonZero"
+                    android:layout_toEndOf="@+id/buttonZero" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

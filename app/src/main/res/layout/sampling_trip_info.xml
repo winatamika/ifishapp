@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sampling_trip_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mick.dockandroidlogin.sampling.TripInfo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nama_tpi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="20dip"
+                android:text="Landing Site" />
+
+            <TextView
+                android:id="@+id/nama_perusahaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="20dip"
+                android:text="Supplier Site" />
+
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="20dip"
+                android:text="DateTime" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Pilih Kapal" />
+
+            <Spinner
+                android:id="@+id/vesselList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="15dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewVic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textStyle="bold"
+                    android:textSize="17dip"
+                    android:text="Nomor VIC " />
+
+                <TextView
+                    android:id="@+id/textViewVicValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtViewVesselName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Nama Kapal" />
+
+            <EditText
+                android:id="@+id/vesselName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters" />
+
+            <TextView
+                android:id="@+id/txtViewCaptainName"
+                android:inputType="textCapSentences"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Nama Kapten" />
+
+            <EditText
+                android:id="@+id/captainName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/txtViewVesselLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Panjang Kapal (M)" />
+            <EditText
+                android:id="@+id/vesselLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewVesselGt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Kapasitas Kapal (GT)" />
+
+            <EditText
+                android:id="@+id/gt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewVesselPk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Mesin Kapal (PK)" />
+
+            <EditText
+                android:id="@+id/pk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewVesselMaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Material Kapal" />
+            <EditText
+                android:id="@+id/vesselMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewVesselNoOfCrew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Jumlah Awak Kapal" />
+            <EditText
+                android:id="@+id/noOfCrew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewTotalCatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Total Tangkapan (Kg)" />
+            <EditText
+                android:id="@+id/totalCatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/txtViewTotalLost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Total Ikan Hilang (Kg)" />
+            <EditText
+                android:id="@+id/totalLost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewLongTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Lama Trip : Hari/Jam" />
+
+
+            <EditText
+                android:id="@+id/longTrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="20"/>
+
+            <Spinner
+                android:id="@+id/satuanTrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="15dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip" />
+
+
+            <TextView
+                android:id="@+id/txtViewRumpon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Rumpon Dropdown" />
+            <Spinner
+                android:id="@+id/rumpon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+
+            <TextView
+                android:id="@+id/txtViewBbm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="BBM (Liter)" />
+            <EditText
+                android:id="@+id/bbm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewFishingDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Jumlah Hari Memancing (Hari)" />
+            <EditText
+                android:id="@+id/fishingDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewIce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Penggunaan Es (Kg)" />
+            <EditText
+                android:id="@+id/ice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/txtViewHookType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="HL Tipe Mata Pancing" />
+            <Spinner
+                android:id="@+id/hookType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/txtViewUsingHandlineTroll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Penggunaan Handline Troll ? " />
+            <EditText
+                android:id="@+id/handlineTroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewOtherGear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Penggunaan Alat Tangkap Lain ? " />
+            <EditText
+                android:id="@+id/otherGear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewJumlahPancing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="PL Jumlah Pancing" />
+            <EditText
+                android:id="@+id/jumlahPancing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewBucketCapacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Kapasitas Ember Umpan" />
+            <EditText
+                android:id="@+id/bucketCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/txtViewGearType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Alat Tangkap" />
+            <Spinner
+                android:id="@+id/gearType"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/enum1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Enumerator 1" />
+
+            <EditText
+                android:id="@+id/enumerator1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="50"/>
+
+            <TextView
+                android:id="@+id/enum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Enumerator 2 " />
+
+            <EditText
+                android:id="@+id/enumerator2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="50"/>
+
+
+
+
+            <TextView
+                android:id="@+id/ttlc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="TLC ? " />
+
+            <Spinner
+                android:id="@+id/tlc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Spot Trace ? " />
+
+            <Spinner
+                android:id="@+id/st"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tflywire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="flywire ? " />
+
+            <Spinner
+                android:id="@+id/flywire"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tpds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="pds ? " />
+
+            <Spinner
+                android:id="@+id/pds"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tgps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="gps ? " />
+
+            <Spinner
+                android:id="@+id/gps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tgps_merk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="gps_merk ? " />
+
+            <Spinner
+                android:id="@+id/gps_merk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tdaya_cahaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="daya_cahaya" />
+            <EditText
+                android:id="@+id/daya_cahaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/tkedalaman_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="kedalaman_min" />
+            <EditText
+                android:id="@+id/kedalaman_min"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/tkedalaman_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="kedalaman_max" />
+            <EditText
+                android:id="@+id/kedalaman_max"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+
+            <TextView
+                android:id="@+id/tjum_palka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="jum_palka" />
+            <EditText
+                android:id="@+id/jum_palka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/tkapasitas_palka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="kapasitas_palka" />
+            <EditText
+                android:id="@+id/kapasitas_palka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+
+            <TextView
+                android:id="@+id/tkapal_andon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="kapal_andon ? " />
+
+            <Spinner
+                android:id="@+id/kapal_andon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+            <TextView
+                android:id="@+id/tasal_andon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="asal_andon ? " />
+
+            <Spinner
+                android:id="@+id/asal_andon"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+
+            <TextView
+                android:id="@+id/tjum_rumpon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="jum_rumpon" />
+            <EditText
+                android:id="@+id/jum_rumpon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="20"/>
+
+            <TextView
+                android:id="@+id/tft_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="ft_name ? " />
+
+            <Spinner
+                android:id="@+id/ft_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"
+                android:layout_marginTop="20dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                />
+
+
+            <TextView
+                android:id="@+id/txtViewNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Notes" />
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Daerah Penangkapan" />
+
+            <ListView
+                android:layout_height="wrap_content"
+                android:id="@+id/catchArea"
+                android:layout_width="match_parent">
+            </ListView>
+
+            <TextView
+                android:text="No Rows Found!"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="111dp"
+                android:layout_marginStart="111dp"
+                android:id="@+id/notFoundCatchArea"
+                android:layout_marginTop="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/buttonAddCatchArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_test"
+                android:text="Tambah Lokasi Penangkapan"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="17dip"
+                android:text="Teknik Pencarian Lokasi Tuna" />
+
+
+            <ListView
+                android:layout_height="wrap_content"
+                android:id="@+id/tunaLocation"
+                android:layout_width="match_parent">
+            </ListView>
+
+            <TextView
+                android:text="No Rows Found!"
+                android:textSize="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="111dp"
+                android:layout_marginStart="111dp"
+                android:id="@+id/notFoundTunaLocation"
+                android:layout_marginTop="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/buttonAddTunaLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_test"
+                android:text="Tambah Teknik Pencarian Lokasi Tuna"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_marginTop="30dp"
+                    android:buttonTint="@color/green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/editText5"
+                    android:layout_alignParentBottom="true"
+                    style="Widget.AppCompat.Button.Colored"
+                    android:text="Simpan Data" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kembali Selection Sheet"
+                    style="Widget.AppCompat.Button.Colored"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/editText5"
+                    android:layout_alignEnd="@+id/editText5" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
